@@ -1,3 +1,9 @@
 [submodule "DUNE"]
 	path = DUNE
 	url = https://github.com/nrybowski/DUNE.git
+[submodule "ofiquic-bird"]
+	path = ofiquic-bird
+	url = https://github.com/nrybowski/ofiquic-bird.git
+[submodule "ofiquic"]
+	path = ofiquic
+	url = https://github.com/nrybowski/ofiquic

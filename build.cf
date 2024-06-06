@@ -1,0 +1,4 @@
+FROM docker.io/debian:12
+
+RUN apt update && apt install -y clang autoconf flex bc bison libssl-dev pkg-config\
+								 libevent-dev libreadline-dev git make cbindgen cargo

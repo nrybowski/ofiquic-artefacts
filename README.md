@@ -6,23 +6,50 @@ network topology changes](http://hdl.handle.net/2078.1/286860)" presented at IFI
 Code artefacts are encoded as git submodules towards the exact version of the code used for the paper.
 Raw data are stored on the [UCLouvain dataverse](https://dataverse.uclouvain.be/dataverse/ingi) and should be downloaded separately.
 
+## How to use this repository ?
+
+First, clone it from GitHub:
+
+```console
+$ git clone https://github.com/nrybowski/ofiquic-artefacts
+```
+
+Then pull the submodules with: 
+
+```console
+$ git submodule update --init --recursive
+```
+
 The remaining of this document is divided in two parts: _(i)_ a description of the different parts of the [oFIQUIC prototype](#ofiquic-prototype) and _(ii)_ the [experimental part](#experiments) described in the paper.
 
 ## oFIQUIC prototype
 
 The oFIQUIC prototype is composed of multiple sub-projects.
 
-### Socket API
-
-> TODO
-
 ### Ordering module
 
-> TODO
+This modules computes the ordered list of distant nodes to contact.
+
+Please, refer to the related [README](ofiquic/README.md) for more details.
 
 ### oFIQUIC implementation in BIRD
 
-> TODO
+This submodule contains the actual implementation of oFIQUIC in the BIRD implementation of OSPF.
+
+We provide a container embedding the required libraries to build our oFIQUIC prototype.
+First, build the container:
+
+```console
+$ docker build -t ofiquic-builder -f build.cf .
+```
+
+Then, use the container to build the prototype:
+
+```console
+$ docker run -v $(pwd):/build -w /build ofiquic-builder:latest bash build.sh
+```
+
+This will produce the [oFIQUIC binary at ofiquic-bird/bird](ofiquic/bird).
 
 ## Experiments
 

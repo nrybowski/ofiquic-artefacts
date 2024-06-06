@@ -34,6 +34,8 @@ Please, refer to the related [README](ofiquic/README.md) for more details.
 
 ### oFIQUIC implementation in BIRD
 
+> I would like to thank [Thomas Wirtgen](https://github.com/twirtgen) for making QUIC available in the BIRD protocol suite
+
 This submodule contains the actual implementation of oFIQUIC in the BIRD implementation of OSPF.
 
 We provide a container embedding the required libraries to build our oFIQUIC prototype.

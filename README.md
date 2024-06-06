@@ -63,13 +63,13 @@ To lower this overhead, we developed two different tools: _(i)_ [DUNE](#distribu
 
 #### Distributed Micro Network Emulation (DUNE) framework
 
-> TODO
+This is a custom orchestration framework aimed at providing more reproducible emulation experiments.
 
 Refer to [the related README](DUNE/README.md) for more details.
 
 #### Minimal Performance Framework (mpf)
 
-> TODO
+We use a slightly modified version of the original [mpf](https://github.com/mpiraux/mpf) tool.
 
 Refer to [the related README](mpf/README.md) for more details.
 
